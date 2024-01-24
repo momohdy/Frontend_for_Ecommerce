@@ -9,7 +9,7 @@ import {
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
   try {
-    const dataOfProduct = await axios.get(`/products/${id}`);
+    const dataOfProduct = await axios.get(`https://frontend-for-ecommerce-api.onrender.com/products/${id}`);
     const getDataOfProduct = dataOfProduct.data;
     dispatch({
       type: CART_ADD_ITEM,

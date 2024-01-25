@@ -12,7 +12,7 @@ export const listProducts = async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
-    const productsHadFetched = await axios.get("https://frontend-for-ecommerce-api.onrender.com/products");
+    const productsHadFetched = await axios.get("https://mahdy-shop.onrender.com/products");
 
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: productsHadFetched.data });
   } catch (err) {
@@ -29,7 +29,7 @@ export const descripeProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const productsHadFetched = await axios.get(`https://frontend-for-ecommerce-api.onrender.com/products/${id}`);
+    const productsHadFetched = await axios.get(`https://mahdy-shop.onrender.com/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,

@@ -22,7 +22,7 @@ export const createOrderAction = (data) => async (dispatch, getState) => {
     const userInformation = getState().userLoginAndLogout.userInformation;
 
     // const   { userLoginAndLogout:  { userInformation } } = getState()
-    const postedData = await axios.post(`https://frontend-for-ecommerce-api.onrender.com/orders`, data , {
+    const postedData = await axios.post(`https://mahdy-shop.onrender.com/orders`, data , {
       // to be in json format
       headers: {
         "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export const getOrderDeatailsAction = (id) => async (dispatch, getState) => {
     const userInformation = getState().userLoginAndLogout.userInformation;
 
     // const   { userLoginAndLogout:  { userInformation } } = getState()
-    const postedData = await axios.get(`https://frontend-for-ecommerce-api.onrender.com/orders/${id}` , {
+    const postedData = await axios.get(`https://mahdy-shop.onrender.com/orders/${id}` , {
       // to be in json format
       headers: {
         Authorization: `Bearer ${userInformation.token}`,
@@ -92,7 +92,7 @@ export const payUbdateAction = (id , paymentResult) => async (dispatch, getState
     
     const userInformation = getState().userLoginAndLogout.userInformation;
     
-    const postedData = await axios.put(`https://frontend-for-ecommerce-api.onrender.com/orders/${id}/pay`, paymentResult , {
+    const postedData = await axios.put(`https://mahdy-shop.onrender.com/orders/${id}/pay`, paymentResult , {
       // to be in json format
       headers: {
         "Content-Type": "application/json",

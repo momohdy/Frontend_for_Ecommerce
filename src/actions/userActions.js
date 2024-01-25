@@ -23,7 +23,7 @@ export const userLoginAction = (email, password) => async (dispatch) => {
     });
 
     const postedData = await axios.post(
-      "https://frontend-for-ecommerce-api.onrender.com/users/login",
+      "https://mahdy-shop.onrender.com/users/login",
       { email, password },
       {
         // to be in json format
@@ -66,7 +66,7 @@ export const userRegisterAction =
       });
 
       const postedData = await axios.post(
-        "https://frontend-for-ecommerce-api.onrender.com/users",
+        "https://mahdy-shop.onrender.com/users",
         { name, email, password },
         {
           // to be in json format
@@ -109,7 +109,7 @@ export const userUbdateAction = (id,name, email, password) => async (dispatch,ge
     // const   { userLoginAndLogout:  { userInformation } } = getState() 
     console.log(name , email );
     const postedData = await axios.put(
-      "https://frontend-for-ecommerce-api.onrender.com/users/profile",
+      "https://mahdy-shop.onrender.com/users/profile",
       { id , name, email, password },
       {
         // to be in json format
@@ -154,7 +154,7 @@ export const userGetProfileAction = () => async (dispatch ,getState) => {
     const userInformation = getState().userLoginAndLogout.userInformation
 
     // const   { userLoginAndLogout:  { userInformation } } = getState() 
-    const postedData = await axios.get(`https://frontend-for-ecommerce-api.onrender.com/users/profile`, {
+    const postedData = await axios.get(`https://mahdy-shop.onrender.com/users/profile`, {
       // to be in json format
       headers: {
         "Content-Type": "application/json",

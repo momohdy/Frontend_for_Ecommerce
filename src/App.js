@@ -25,20 +25,20 @@ function App() {
       <Container>
         <main>
           <Routes>
-            <Route path="https://frontend-for-ecommerce.onrender.com/" element={<Home />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/product/:id" element={<DeatilsOfProduct />} exact />
+            <Route path="/" element={<Home />} exact />
+            <Route path="/product/:id" element={<DeatilsOfProduct />} exact />
             <Route
-              path="https://frontend-for-ecommerce.onrender.com/ShoppingCarts/:id?/:qty?"
+              path="/ShoppingCarts/:id?/:qty?"
               element={<ShoppingCarts />}
               exact
             />
-            <Route path="https://frontend-for-ecommerce.onrender.com/login" element={<Login />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/register" element={<Register />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/profile" element={<Profile />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/shipping" element={<Shipping />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/payment" element={<Payment />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/placeOrder" element={<PlaceOrder />} exact />
-            <Route path="https://frontend-for-ecommerce.onrender.com/orders/:id" element={<OrderDetails />} exact />
+            <Route path="/login" element={<Login />} exact />
+            <Route path="/register" element={<Register />} exact />
+            <Route path="/profile" element={<Profile />} exact />
+            <Route path="/shipping" element={<Shipping />} exact />
+            <Route path="/payment" element={<Payment />} exact />
+            <Route path="/placeOrder" element={<PlaceOrder />} exact />
+            <Route path="/orders/:id" element={<OrderDetails />} exact />
           </Routes>
         </main>
       </Container>

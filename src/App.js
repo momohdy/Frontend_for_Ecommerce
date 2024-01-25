@@ -25,10 +25,10 @@ function App() {
       <Container>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} exact />
-            <Route path="/product/:id" element={<DeatilsOfProduct />} exact />
+            <Route path="https://frontend-for-ecommerce.onrender.com/" element={<Home />} exact />
+            <Route path="https://frontend-for-ecommerce.onrender.com/product/:id" element={<DeatilsOfProduct />} exact />
             <Route
-              path="/ShoppingCarts/:id?/:qty?"
+              path="https://frontend-for-ecommerce.onrender.com/ShoppingCarts/:id?/:qty?"
               element={<ShoppingCarts />}
               exact
             />
